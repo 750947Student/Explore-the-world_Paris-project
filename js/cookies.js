@@ -1,17 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+const cookiePopup = document.querySelector(".cookie-banner");
+const cookieButton = document.getElementById("acceptCookies");
 
-  const cookieBanner = document.getElementById("cookieBanner");
-  const acceptButton = document.getElementById("acceptCookies");
+if (cookiePopup && cookieButton) {
+  cookiePopup.style.display = "block";
 
-  // ✅ Show banner only if not accepted yet
-  if (!localStorage.getItem("cookiesAccepted")) {
-    cookieBanner.style.display = "block";
-  }
-
-  // ✅ Hide banner when user clicks Accept
-  acceptButton.addEventListener("click", function () {
-    localStorage.setItem("cookiesAccepted", "true");
-    cookieBanner.style.display = "none";
+  cookieButton.addEventListener("click", () => {
+    cookiePopup.style.display = "none";
   });
-
-});
+}
