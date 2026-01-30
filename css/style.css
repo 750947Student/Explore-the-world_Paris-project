@@ -1,0 +1,228 @@
+/* ✅ Global Page Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f0e6;
+  color: #000000;
+}
+
+/* ✅ Headings Color */
+ h2,h3, h4, h5, h6 {
+  color: #7b3b3b;
+
+  .cookie-banner h2 {
+  color: #ffffff;
+}
+
+ 
+}
+
+/* ✅ Header Layout + Styling */
+header {
+  background-color: #7b3b3b;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ✅ Logo */
+.logo {
+  margin: 0;
+}
+.branding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+
+/* ✅ Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* ✅ Navigation Interaction */
+nav a:hover {
+  background-color: #c88b88;
+  color: white;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+}
+
+nav a[aria-current="page"] {
+  border-bottom: 3px solid #c88b88;
+}
+
+nav a:focus {
+  outline: 2px solid #000000;
+}
+
+/* ✅ Page Section Layout */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+/* ✅ Images */
+figure {
+  margin: 0;
+  flex: 1 1 300px;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ✅ Article Text */
+article {
+  flex: 1 1 300px;
+}
+
+/* ✅ Buttons */
+.button,
+button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background-color: #c88b88;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+  background-color: #7b3b3b;
+}
+
+.button:active,
+button:active {
+  background-color: #4a565e;
+}
+
+.button:focus,
+button:focus {
+  outline: 2px solid #000000;
+}
+
+/* ✅ Hamburger Menu Setup */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ✅ Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #7b3b3b;
+  color: #f5f0e6;
+}
+
+/* ✅ Contact Form Styling */
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+fieldset {
+  border: 2px solid #7b3b3b;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid #4a565e;
+  border-radius: 8px;
+}
+
+/* ✅ Social Media Links */
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+.social-links img {
+  width: 35px;
+  height: auto;
+}
+/* ✅ Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4a565e;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+ z-index: 9999;
+
+  display: none; /* Hidden until JS shows it */
+}
+
+/* ✅ Responsive Layout */
+@media (max-width: 768px) {
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  #menu-toggle:checked + label + nav ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  section {
+    flex-direction: column;
+  }
+}
