@@ -229,3 +229,38 @@ textarea {
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  figure,
+  article {
+    flex: 1 1 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+}
